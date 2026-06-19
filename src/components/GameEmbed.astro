@@ -1,0 +1,74 @@
+---
+export interface Props {
+  title?: string;
+}
+const { title = 'Penalty Shooters 2' } = Astro.props;
+---
+<div class="game-wrap">
+  <iframe
+    src="https://penaltyshooters.io/1.embed"
+    title={title}
+    allowfullscreen
+    loading="eager"
+    class="game-frame"
+    sandbox="allow-scripts allow-same-origin allow-pointer-lock allow-popups"
+  ></iframe>
+  <button class="fullscreen-btn" id="fsBtn" aria-label="Go fullscreen" title="Fullscreen">⛶</button>
+</div>
+<p class="embed-note">Free to play in your browser — no download required.</p>
+
+<style>
+  .game-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    max-height: 540px;
+    background: #000;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    margin-top: 1rem;
+  }
+  .game-frame {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+  }
+  .fullscreen-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.15s;
+    z-index: 10;
+  }
+  .fullscreen-btn:hover { background: rgba(0,0,0,0.8); }
+  .embed-note {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+    text-align: center;
+  }
+
+  @media (max-width: 600px) {
+    .game-wrap { aspect-ratio: 4 / 3; max-height: 320px; }
+  }
+</style>
+
+<script>
+  document.getElementById('fsBtn')?.addEventListener('click', () => {
+    const wrap = document.querySelector('.game-wrap') as HTMLElement;
+    if (wrap?.requestFullscreen) wrap.requestFullscreen();
+  });
+</script>

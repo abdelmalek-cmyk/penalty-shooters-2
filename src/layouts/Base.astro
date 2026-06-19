@@ -1,0 +1,141 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical: string;
+  ogImage?: string;
+  schema?: object | object[];
+}
+
+const { title, description, canonical, ogImage = '/og-default.svg', schema } = Astro.props;
+
+const schemaArray = schema
+  ? Array.isArray(schema) ? schema : [schema]
+  : [];
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:image" content={`https://penaltyshooters2.co.uk${ogImage}`} />
+  <meta property="og:site_name" content="Penalty Shooters 2" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={`https://penaltyshooters2.co.uk${ogImage}`} />
+
+  <!-- JSON-LD Schemas -->
+  {schemaArray.map(s => (
+    <script type="application/ld+json" set:html={JSON.stringify(s)} />
+  ))}
+
+  <style is:global>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #0a6e0a;
+      --green-dark: #074d07;
+      --green-light: #12a112;
+      --white: #ffffff;
+      --off-white: #f5f7f4;
+      --text: #1a1a1a;
+      --text-muted: #555;
+      --border: #d4e4d4;
+      --radius: 8px;
+      --max-w: 900px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--off-white);
+    }
+
+    a { color: var(--green); text-decoration: underline; }
+    a:hover { color: var(--green-dark); }
+
+    h1,h2,h3,h4 { line-height: 1.25; color: var(--green-dark); }
+    h1 { font-size: clamp(1.6rem, 4vw, 2.2rem); }
+    h2 { font-size: clamp(1.2rem, 3vw, 1.6rem); margin-top: 2rem; }
+    h3 { font-size: 1.15rem; margin-top: 1.5rem; }
+
+    p { margin-top: 0.75rem; }
+    ul, ol { margin-top: 0.75rem; padding-left: 1.5rem; }
+    li { margin-bottom: 0.3rem; }
+
+    strong { color: var(--green-dark); }
+
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem; }
+    th { background: var(--green); color: var(--white); padding: 0.6rem 0.8rem; text-align: left; }
+    td { padding: 0.55rem 0.8rem; border-bottom: 1px solid var(--border); }
+    tr:nth-child(even) td { background: #eef4ee; }
+
+    .badge {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--green);
+      color: var(--white);
+      font-weight: 700;
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius);
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+    .btn:hover { background: var(--green-dark); color: var(--white); }
+
+    .last-updated {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <slot name="header" />
+  <slot />
+  <slot name="footer" />
+</body>
+</html>

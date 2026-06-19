@@ -1,0 +1,198 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import GameEmbed from '../components/GameEmbed.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const canonical = 'https://penaltyshooters2.co.uk/unblocked/';
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Is Penalty Shooters 2 unblocked at school?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Penalty Shooters 2 is a lightweight HTML5 game that runs in any browser, so it works on most school computers and Chromebooks where games are not blocked at the network level. This site serves it over HTTPS with no third-party scripts, which helps it pass most content filters.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do I play Penalty Shooters 2 unblocked?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Open penaltyshooters2.co.uk/unblocked/ in any browser — including on school Chromebooks, library PCs, and work laptops. No download, no account, no plugins required. If your school network blocks this URL, try asking your IT administrator to whitelist it, or use the browser version via a school-approved device.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Penalty Shooters 2 work on a Chromebook?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes. Penalty Shooters 2 is an HTML5 browser game and runs natively in Chrome on any Chromebook without requiring Linux, Android apps, or any extension. Open the page, press play, and it works.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What are Penalty Shooters 2 unblocked 76, 66, and classroom 6x?',
+      acceptedAnswer: { '@type': 'Answer', text: '"Unblocked 76", "66", and "Classroom 6x" are third-party sites that mirror games for school access. They are not official and vary in quality and safety. Playing directly at penaltyshooters2.co.uk gives you the same game over a clean, ad-safe HTTPS connection without needing to visit those portals.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to download anything to play Penalty Shooters 2?',
+      acceptedAnswer: { '@type': 'Answer', text: 'No. The game runs entirely in your browser — nothing to download, install, or sign up for. Just open the page and play.' },
+    },
+  ],
+};
+
+const videoGameSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'VideoGame',
+  name: 'Penalty Shooters 2',
+  description: 'Free online HTML5 penalty shootout game — no download, works in any browser including on school Chromebooks and work laptops.',
+  url: canonical,
+  operatingSystem: 'Any (browser-based)',
+  applicationCategory: 'Game',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'GBP' },
+};
+---
+<Base
+  title="Penalty Shooters 2 Unblocked – Play at School or Work"
+  description="Penalty Shooters 2 unblocked — play the full soccer game free at school or work. HTTPS, no download, no shady redirects. Works on Chromebook."
+  canonical={canonical}
+  schema={[videoGameSchema, faqSchema]}
+>
+  <Header slot="header" />
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <Breadcrumb items={[
+          { label: 'Home', href: '/' },
+          { label: 'Unblocked' },
+        ]} />
+        <h1>Penalty Shooters 2 Unblocked</h1>
+        <p class="lead">
+          <strong>Penalty Shooters 2 is an HTML5 browser game — no download, no plugins — so it runs on most school computers, Chromebooks, and work laptops without any special setup.</strong>
+          Play it right here over a secure HTTPS connection. No accounts, no redirects to shady "unblocked 66/76" mirror sites.
+        </p>
+        <p class="last-updated">Last verified: June 2026</p>
+        <GameEmbed title="Penalty Shooters 2 Unblocked" />
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container">
+        <h2>Why does Penalty Shooters 2 get blocked at school?</h2>
+        <p>
+          School and workplace networks often use content-filtering software that blocks categories like "games" or "entertainment". This isn't specific to Penalty Shooters 2 — most gaming portals (Poki, CrazyGames, Friv) end up on block lists because of their domain category, not because the games themselves are harmful.
+        </p>
+        <p>
+          A dedicated single-game site like this one sits in a different category than a games portal, which is one reason it passes filters that block poki.com. The game is also served over HTTPS with no third-party tracking scripts, which removes another common filter trigger.
+        </p>
+        <h3>What "unblocked 76", "66", and "Classroom 6x" actually are</h3>
+        <p>
+          These are third-party mirror sites that rehost games specifically to circumvent school filters. They work inconsistently, often carry intrusive ads, and are themselves frequently blocked once IT departments notice them. Playing directly here is cleaner, faster, and doesn't require hunting for a working mirror.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>How to play Penalty Shooters 2 at school</h2>
+        <ol class="steps">
+          <li><strong>Open your browser.</strong> Chrome, Edge, Firefox, and Safari all work — including on school Chromebooks.</li>
+          <li><strong>Go to penaltyshooters2.co.uk/unblocked/</strong> — this page. No account, no login.</li>
+          <li><strong>Press play.</strong> The game loads in the frame above. Controls: hold to aim (longer = higher shot), release to kick. As goalkeeper, move toward the target and release to dive.</li>
+          <li><strong>If the page is blocked:</strong> ask your IT administrator to whitelist penaltyshooters2.co.uk, or play during a break on a personal device.</li>
+        </ol>
+
+        <div class="card compat-table">
+          <h3>Device compatibility</h3>
+          <table>
+            <thead>
+              <tr><th>Device</th><th>Works?</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>School Chromebook</td><td>✅ Yes</td><td>Runs natively in Chrome — no Android or Linux mode needed</td></tr>
+              <tr><td>Windows laptop / PC</td><td>✅ Yes</td><td>Any modern browser</td></tr>
+              <tr><td>Library / lab PC</td><td>✅ Yes</td><td>Works if the network allows gaming sites</td></tr>
+              <tr><td>iPhone / iPad</td><td>✅ Yes</td><td>Tap-to-play in Safari or Chrome</td></tr>
+              <tr><td>Android phone</td><td>✅ Yes</td><td>Browser or Google Play app</td></tr>
+              <tr><td>Mac</td><td>✅ Yes</td><td>Any browser</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container">
+        <h2>Quick tips for school breaks</h2>
+        <ul>
+          <li><strong>Vary your shots</strong> — the AI goalkeeper remembers your pattern. Mix top-left, bottom-right, and the occasional centre shot.</li>
+          <li><strong>Don't over-hold</strong> — holding the aim button too long sends the ball over the bar. Medium hold for low shots, slightly longer for the top corners.</li>
+          <li><strong>As goalkeeper, wait</strong> — commit your dive too early and the AI will side-step you. Watch the target indicator before releasing.</li>
+          <li><strong>Short on time?</strong> Pick a weaker fantasy league first — the group stage is only a few matches and you can pause and return later (progress is per-session only).</li>
+        </ul>
+        <p>For the full controls breakdown and advanced tips, see the <a href="/how-to-play/">how to play guide</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>Unblocked — frequently asked questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Is Penalty Shooters 2 unblocked at school?</summary>
+            <p>Penalty Shooters 2 is a lightweight HTML5 game that runs in any browser, so it works on most school computers and Chromebooks where games are not blocked at the network level. This site serves it over HTTPS with no third-party scripts, which helps it pass most content filters.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I play Penalty Shooters 2 unblocked?</summary>
+            <p>Open penaltyshooters2.co.uk/unblocked/ in any browser — including on school Chromebooks, library PCs, and work laptops. No download, no account, no plugins required. If your school network blocks this URL, try asking your IT administrator to whitelist it, or use the browser version via a personal device.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Does Penalty Shooters 2 work on a Chromebook?</summary>
+            <p>Yes. Penalty Shooters 2 is an HTML5 browser game and runs natively in Chrome on any Chromebook without requiring Linux, Android apps, or any extension. Open the page, press play, and it works.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What are Penalty Shooters 2 unblocked 76, 66, and Classroom 6x?</summary>
+            <p>"Unblocked 76", "66", and "Classroom 6x" are third-party sites that mirror games for school access. They are not official and vary in quality and safety. Playing directly here gives you the same game over a clean, HTTPS connection without needing those portals.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need to download anything to play?</summary>
+            <p>No. The game runs entirely in your browser — nothing to download, install, or sign up for. Just open the page and play.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" style="padding-bottom:2rem">
+      <div class="card callout">
+        <p>
+          Back to the main game? <a href="/">Penalty Shooters 2 homepage →</a> &nbsp;|&nbsp;
+          Want tips? <a href="/how-to-play/">How to play →</a>
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <Footer slot="footer" />
+</Base>
+
+<style>
+  .hero { background: var(--white); padding: 1.5rem 0 2rem; border-bottom: 1px solid var(--border); }
+  .lead { font-size: 1.05rem; margin-top: 0.6rem; color: var(--text); max-width: 700px; }
+  .section { padding: 2rem 0; }
+  .bg-white { background: var(--white); }
+  .steps { margin-top: 0.75rem; }
+  .steps li { margin-bottom: 0.6rem; }
+  .callout { background: #eef7ee; border-color: var(--green-light); }
+  .callout p { margin: 0; }
+  .faq-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .faq-item { border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); }
+  .faq-item summary {
+    font-weight: 700; padding: 0.85rem 1rem; cursor: pointer;
+    color: var(--green-dark); list-style: none;
+    display: flex; justify-content: space-between; align-items: center; font-size: 0.97rem;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--green); }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item p { padding: 0 1rem 0.85rem; margin: 0; font-size: 0.95rem; }
+  .compat-table table th { background: var(--green); color: var(--white); }
+</style>

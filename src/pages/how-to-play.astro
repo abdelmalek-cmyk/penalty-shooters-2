@@ -1,0 +1,308 @@
+---
+import Base from '../layouts/Base.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const canonical = 'https://penaltyshooters2.co.uk/how-to-play/';
+
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'How to Play Penalty Shooters 2',
+  description: 'Step-by-step guide to playing Penalty Shooters 2 — controls, shooting technique, goalkeeping, tournament format, and tips.',
+  step: [
+    { '@type': 'HowToStep', name: 'Pick a league and team', text: 'Choose from 12 fantasy football leagues. Each league has ~30 teams inspired by real clubs.' },
+    { '@type': 'HowToStep', name: 'Take your penalty', text: 'Hold the mouse button (or tap and hold on mobile) to start your run-up and aim. The longer you hold, the higher the shot. Release to kick.' },
+    { '@type': 'HowToStep', name: 'Save as goalkeeper', text: 'When the AI shoots, an on-screen target appears at the ball\'s destination. Hold and move toward it, then release to dive.' },
+    { '@type': 'HowToStep', name: 'Win the round', text: 'Each round is 5 shots per team. Score more than your opponent. If level after 5, sudden death begins.' },
+    { '@type': 'HowToStep', name: 'Advance through the tournament', text: 'Finish 1st or 2nd in your group to reach the knockout stage. Win the final to lift the cup.' },
+  ],
+};
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'How do you shoot high in Penalty Shooters 2?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Hold the mouse button or your finger longer before releasing — shot height increases the longer you hold. Aim for the top corners, where the goalkeeper has the least time to reach. Do not over-hold, or the ball flies over the crossbar.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How do you save penalties as the goalkeeper in Penalty Shooters 2?',
+      acceptedAnswer: { '@type': 'Answer', text: 'After the AI starts its run-up, an on-screen target indicator shows where the ball is headed. Hold and move toward that target, then release to dive. The key is not committing too early — wait for the target before diving.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How does sudden death work in Penalty Shooters 2?',
+      acceptedAnswer: { '@type': 'Answer', text: 'If the score is level after five shots each, the match goes to sudden death. Teams take one penalty at a time. The first team to score while the other misses — after an equal number of attempts — wins the round.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is the best strategy in Penalty Shooters 2?',
+      acceptedAnswer: { '@type': 'Answer', text: 'The best strategy is unpredictability. Never shoot the same corner twice in a row — the keeper remembers patterns. Mix high and low, left and right, with the occasional centre shot. Use medium power for accuracy and aim for top corners on key kicks. As goalkeeper, wait for the target indicator before committing your dive.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is it possible to win Penalty Shooters 2 every time?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Yes — there is no artificial difficulty ceiling. You can win every match. The AI does adapt to patterns, so varying shot placement and dive timing is the key to consistent wins.' },
+    },
+  ],
+};
+---
+<Base
+  title="How to Play Penalty Shooters 2 – Controls, Tips & Rules"
+  description="Learn how to play Penalty Shooters 2: controls, how to shoot high, save penalties, win shootouts and survive sudden death. Beginner to pro."
+  canonical={canonical}
+  schema={[howToSchema, faqSchema]}
+>
+  <Header slot="header" />
+
+  <main>
+    <div class="container page-header">
+      <Breadcrumb items={[
+        { label: 'Home', href: '/' },
+        { label: 'How to Play' },
+      ]} />
+      <h1>How to Play Penalty Shooters 2</h1>
+      <p class="lead">
+        <strong>Penalty Shooters 2 has one-button controls: hold to aim (longer = higher shot), release to kick.</strong>
+        As goalkeeper, hold and move toward the target indicator, then release to dive. Each round is 5 shots per side; win your group stage, knockouts, and final to lift the cup.
+      </p>
+      <p class="last-updated">Last verified: June 2026 · <a href="/">Play the game →</a></p>
+    </div>
+
+    <!-- Controls -->
+    <section class="section bg-white">
+      <div class="container">
+        <h2>Controls</h2>
+        <table class="controls-table">
+          <thead>
+            <tr><th>Action</th><th>Mouse (desktop)</th><th>Touchscreen (mobile)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Start aiming / run-up</td><td>Hold left mouse button</td><td>Tap and hold</td></tr>
+            <tr><td>Adjust shot height</td><td>Hold longer = higher</td><td>Hold longer = higher</td></tr>
+            <tr><td>Kick the ball</td><td>Release mouse button</td><td>Release finger</td></tr>
+            <tr><td>Move keeper toward target</td><td>Hold + move cursor</td><td>Hold + drag</td></tr>
+            <tr><td>Dive to save</td><td>Release mouse button</td><td>Release finger</td></tr>
+          </tbody>
+        </table>
+        <p class="tip"><strong>Key rule:</strong> if you hold too long when shooting, the ball goes over the crossbar. Medium hold = low/mid shot. Longer hold = top-corner height. Maximum hold = over the bar.</p>
+      </div>
+    </section>
+
+    <!-- Step by step -->
+    <section class="section">
+      <div class="container">
+        <h2>How to play — step by step</h2>
+
+        <div class="step-block">
+          <div class="step-num">1</div>
+          <div>
+            <h3>Pick a league and team</h3>
+            <p>The main menu shows 12 fantasy leagues, each based on a real country's top division — England, Spain, Germany, Italy, France, Brazil, Argentina, and more. Pick any league and choose one of its ~30 teams to start your tournament campaign.</p>
+          </div>
+        </div>
+
+        <div class="step-block">
+          <div class="step-num">2</div>
+          <div>
+            <h3>Navigate the group stage</h3>
+            <p>You're placed in a group with several other teams. Each group match is a 5-shot-per-side penalty shootout. You need to finish 1st or 2nd in your group to advance. Keep an eye on the group table — you may not need to win every match outright.</p>
+          </div>
+        </div>
+
+        <div class="step-block">
+          <div class="step-num">3</div>
+          <div>
+            <h3>Taking a penalty — shooting</h3>
+            <p>Your striker faces the goalkeeper. Hold the mouse button (or tap and hold on mobile) to begin the run-up and aim. <strong>The longer you hold, the higher the ball will travel</strong> when you release. Pick your spot with the cursor/finger position, then release to strike the ball. Release too early = low shot. Hold too long = over the bar.</p>
+          </div>
+        </div>
+
+        <div class="step-block">
+          <div class="step-num">4</div>
+          <div>
+            <h3>Saving a penalty — goalkeeping</h3>
+            <p>After your shot, roles reverse and the AI takes its penalty. Watch for the <strong>on-screen target indicator</strong> that appears as the AI runs up. Hold and move toward it, then release your hold to commit the dive. Diving too early is the most common mistake — wait for the target to appear clearly before committing.</p>
+          </div>
+        </div>
+
+        <div class="step-block">
+          <div class="step-num">5</div>
+          <div>
+            <h3>Sudden death</h3>
+            <p>If both teams score the same number of goals after 5 shots, the round goes to sudden death. One shot each, alternating, until one team scores and the other misses after an equal number of attempts. Composure matters here — don't change your routine just because the pressure is higher.</p>
+          </div>
+        </div>
+
+        <div class="step-block">
+          <div class="step-num">6</div>
+          <div>
+            <h3>Knockout rounds and the final</h3>
+            <p>Once out of the group stage, every match is a single-elimination shootout. Win each knockout match to reach the final. Win the final and the trophy is yours. The tournament resets so you can pick a different league and go again.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="section bg-white">
+      <div class="container">
+        <h2>7 tips to win more often</h2>
+        <ol class="tips-list">
+          <li>
+            <strong>Vary your shot placement.</strong> The AI goalkeeper adapts to patterns. If you score top-left twice in a row, the keeper starts leaning that way. Mix corners every shot.
+          </li>
+          <li>
+            <strong>Top corners are your best friend.</strong> The goalkeeper has the least reaction time for top-corner shots. Learn the hold-time that consistently hits the top-left and top-right without going over — then use it on key kicks.
+          </li>
+          <li>
+            <strong>Medium power beats max power.</strong> Blasting at full hold risks the crossbar. A controlled mid-range hold gets the ball in the net more reliably than hammering it.
+          </li>
+          <li>
+            <strong>The occasional centre shot works.</strong> Keepers over-dive when they expect a corner. A calm, down-the-middle penalty catches them off guard after a few corners.
+          </li>
+          <li>
+            <strong>As goalkeeper, don't dive early.</strong> The target indicator appears after the AI begins its run-up. Committing before you see it is guesswork. Wait, read, then dive.
+          </li>
+          <li>
+            <strong>Chip / Panenka rarely works.</strong> The lightest-touch hold sends the ball very low and central. It surprises the AI occasionally, but the keeper dives early for it more than a human keeper would. Use sparingly.
+          </li>
+          <li>
+            <strong>Sudden death: stay routine.</strong> The highest-pressure moment is also the moment players change their style unnecessarily. Keep using the same corner strategy that got you there.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Scoring & tournament -->
+    <section class="section">
+      <div class="container">
+        <h2>Scoring and tournament format</h2>
+        <div class="format-grid">
+          <div class="card">
+            <h3>Group stage</h3>
+            <ul>
+              <li>Play against each other team in your group</li>
+              <li>Win = 3 pts &nbsp;|&nbsp; Draw = 1 pt &nbsp;|&nbsp; Loss = 0 pts</li>
+              <li>Top 2 teams advance to knockouts</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Each match</h3>
+            <ul>
+              <li>5 shots per team, alternating striker/keeper roles</li>
+              <li>Tie after 5 → sudden death</li>
+              <li>Sudden death: 1 shot each until a winner emerges</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Knockout → Final</h3>
+            <ul>
+              <li>Single-elimination from the last 16 / quarter-finals onward</li>
+              <li>One match, same 5-shot format</li>
+              <li>Win the final = cup victory</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section bg-white" id="faq">
+      <div class="container">
+        <h2>How to play — frequently asked questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How do you shoot high in Penalty Shooters 2?</summary>
+            <p>Hold the mouse button or your finger longer before releasing — shot height increases the longer you hold. Aim for the top corners, where the goalkeeper has the least time to reach. Don't over-hold, or the ball flies over the crossbar.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do you save penalties as the goalkeeper?</summary>
+            <p>After the AI starts its run-up, an on-screen target indicator shows where the ball is headed. Hold and move toward that target, then release to dive. The key is not committing too early — wait for the target before diving.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How does sudden death work?</summary>
+            <p>If the score is level after five shots each, the match goes to sudden death. Teams take one penalty at a time. The first team to score while the other misses — after an equal number of attempts — wins the round.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is the best strategy in Penalty Shooters 2?</summary>
+            <p>Unpredictability. Never shoot the same corner twice in a row — the keeper remembers patterns. Mix high and low, left and right, with the occasional centre shot. Use medium power for accuracy and aim for top corners on key kicks. As goalkeeper, wait for the target indicator before committing your dive.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is it possible to win Penalty Shooters 2 every time?</summary>
+            <p>Yes — there is no artificial difficulty ceiling. You can win every match. The AI adapts to patterns, so varying shot placement and dive timing is the key to consistent wins.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="container" style="padding-bottom:2rem">
+      <div class="card callout">
+        <p>Ready to put it into practice? <a href="/">Play Penalty Shooters 2 →</a> &nbsp;|&nbsp; More questions? <a href="/faq/">See the full FAQ →</a></p>
+      </div>
+    </div>
+  </main>
+
+  <Footer slot="footer" />
+</Base>
+
+<style>
+  .page-header { padding: 1.5rem 0 1.5rem; }
+  .lead { font-size: 1.05rem; margin-top: 0.6rem; max-width: 700px; }
+  .section { padding: 2rem 0; }
+  .bg-white { background: var(--white); }
+
+  .controls-table { margin-top: 0.75rem; }
+  .controls-table th { background: var(--green); color: var(--white); }
+  .tip { margin-top: 1rem; background: #eef7ee; border-left: 3px solid var(--green); padding: 0.7rem 1rem; border-radius: 0 var(--radius) var(--radius) 0; font-size: 0.95rem; }
+
+  .step-block {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+    align-items: flex-start;
+  }
+  .step-num {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    background: var(--green);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1rem;
+    margin-top: 0.15rem;
+  }
+  .step-block h3 { margin-top: 0; }
+
+  .tips-list { margin-top: 0.75rem; }
+  .tips-list li { margin-bottom: 0.8rem; }
+
+  .format-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .format-grid .card { margin-top: 0; }
+  .format-grid h3 { margin-top: 0; }
+  .format-grid ul { margin-top: 0.5rem; }
+
+  .callout { background: #eef7ee; border-color: var(--green-light); }
+  .callout p { margin: 0; }
+
+  .faq-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
+  .faq-item { border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); }
+  .faq-item summary {
+    font-weight: 700; padding: 0.85rem 1rem; cursor: pointer;
+    color: var(--green-dark); list-style: none;
+    display: flex; justify-content: space-between; align-items: center; font-size: 0.97rem;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--green); }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item p { padding: 0 1rem 0.85rem; margin: 0; font-size: 0.95rem; }
+</style>

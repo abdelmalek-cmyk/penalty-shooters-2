@@ -1,0 +1,40 @@
+---
+const year = new Date().getFullYear();
+---
+<footer>
+  <div class="container ftr-inner">
+    <p class="ftr-brand">⚽ Penalty Shooters 2</p>
+    <nav aria-label="Footer navigation">
+      <a href="/">Play</a>
+      <a href="/unblocked/">Unblocked</a>
+      <a href="/how-to-play/">How to Play</a>
+      <a href="/faq/">FAQ</a>
+    </nav>
+    <p class="ftr-legal">
+      &copy; {year} penaltyshooters2.co.uk &mdash; fan site, not affiliated with the game developer.
+      Penalty Shooters 2 is created by 10x10games / Vladeta Marinkovic.
+    </p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--green-dark);
+    color: rgba(255,255,255,0.8);
+    margin-top: 3rem;
+    padding: 2rem 0 1.5rem;
+    font-size: 0.875rem;
+  }
+  .ftr-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+  }
+  .ftr-brand { font-weight: 800; font-size: 1rem; color: var(--white); }
+  footer nav { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; }
+  footer a { color: rgba(255,255,255,0.75); text-decoration: none; }
+  footer a:hover { color: var(--white); text-decoration: underline; }
+  .ftr-legal { color: rgba(255,255,255,0.5); font-size: 0.78rem; max-width: 560px; }
+</style>
