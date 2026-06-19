@@ -57,6 +57,21 @@ const faqSchema = {
       name: 'Is it possible to win Penalty Shooters 2?',
       acceptedAnswer: { '@type': 'Answer', text: 'Yes — you can win every match and take the cup. There is no artificial difficulty cap. The key is varying your shot placement so the keeper cannot read you, and timing your dives as goalkeeper.' },
     },
+    {
+      '@type': 'Question',
+      name: 'How do you shoot high in Penalty Shooters 2?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Hold the mouse button or your finger longer before releasing — shot height increases the longer you hold. Aim for the top corners where the goalkeeper has the least time to react. Do not over-hold or the ball will go over the crossbar.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'How many leagues are in Penalty Shooters 2?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Penalty Shooters 2 has 12 fantasy football leagues covering countries including England, Spain, Germany, Italy, France, the Netherlands, Brazil, Argentina, Mexico, Russia, and North America, plus a World Cup and a Global Cup tournament. Each league has around 30 teams, giving approximately 360 teams in total.' },
+    },
+    {
+      '@type': 'Question',
+      name: 'Who made Penalty Shooters 2?',
+      acceptedAnswer: { '@type': 'Answer', text: 'Penalty Shooters 2 was developed by Vladeta Marinkovic, an electrical engineer who has created more than 50 HTML5 games, published under the studio name 10x10games. The game was first released in April 2016 and has been updated regularly since.' },
+    },
   ],
 };
 ---
@@ -69,84 +84,202 @@ const faqSchema = {
   <Header slot="header" />
 
   <main>
+
+    <!-- Hero -->
     <section class="hero">
       <div class="container">
         <Breadcrumb items={[{ label: 'Home', href: '/' }]} />
         <h1>Penalty Shooters 2</h1>
         <p class="lead">
           <strong>Penalty Shooters 2 is a free online football game where every match is a penalty shootout.</strong>
-          Pick a fantasy league and team, alternate between shooting and goalkeeping, and fight through group stage, knockouts, and the final to lift the cup — all in your browser with no download.
+          Pick a fantasy league and team, alternate between shooting and goalkeeping, and fight through group stage, knockouts, and the final to lift the cup — all in your browser with no download needed.
         </p>
         <p class="last-updated">Last verified: June 2026</p>
         <GameEmbed />
       </div>
     </section>
 
+    <!-- About -->
     <section class="section">
       <div class="container">
         <h2>About Penalty Shooters 2</h2>
         <p>
-          Penalty Shooters 2 is a single-player browser game developed by Vladeta Marinkovic and published by 10x10games, originally released in April 2016. You compete against AI opponents through a tournament structure: a group stage where you must finish 1st or 2nd to advance, then knockout rounds, and finally the cup final.
+          Penalty Shooters 2 is a single-player browser penalty-shootout game developed by Vladeta Marinkovic — an electrical engineer who has built over 50 HTML5 games — and published under the studio name 10x10games. It was first released in April 2016 and has received several major updates since, most recently the World Cup 2026 / Global Cup tournament mode.
         </p>
         <p>
-          Each match is decided by five shots per side. If scores are level after five, the round goes to sudden death — one shot each until one team scores and the other misses. You play both roles every round: taking penalties as the striker, then diving to save them as the goalkeeper.
+          The premise is simple: every match in the game is decided by a penalty shootout. There are no regular-time periods, no corner kicks, no free kicks. Just you, a goalkeeper, a penalty spot, and five shots each. You alternate between the striker and the keeper roles in every single round, which means you can never switch off — one moment you are picking your corner, the next you are reading the AI's run-up and committing your dive.
+        </p>
+        <p>
+          The game is entirely free to play in your browser. No account, no download, no plugins. It also runs on Android via Google Play and on PC via Steam, but the browser version is the same game and requires nothing beyond a modern browser tab.
         </p>
 
         <div class="meta-block card">
           <h3>Game details</h3>
           <table>
             <tbody>
-              <tr><th scope="row">Genre</th><td>Sports / football / penalty-shootout</td></tr>
+              <tr><th scope="row">Full name</th><td>Penalty Shooters 2 — Football</td></tr>
               <tr><th scope="row">Developer</th><td>Vladeta Marinkovic / 10x10games</td></tr>
               <tr><th scope="row">First released</th><td>April 2016</td></tr>
+              <tr><th scope="row">Latest update</th><td>2026 (Global Cup / World Cup 2026 mode)</td></tr>
               <tr><th scope="row">Platform</th><td>Browser (HTML5), Android (Google Play), Steam</td></tr>
-              <tr><th scope="row">Players</th><td>Single-player vs AI</td></tr>
-              <tr><th scope="row">Cost</th><td>Free — no download required</td></tr>
+              <tr><th scope="row">Players</th><td>Single-player vs AI — no online multiplayer</td></tr>
+              <tr><th scope="row">Cost</th><td>Free — no download or account required</td></tr>
               <tr><th scope="row">Controls</th><td>Mouse / tap: hold to aim, release to shoot or dive</td></tr>
               <tr><th scope="row">Leagues</th><td>12 fantasy leagues, ~360 teams</td></tr>
+              <tr><th scope="row">Rating</th><td>4.4 / 5 (over 3 million votes on Poki)</td></tr>
             </tbody>
           </table>
         </div>
       </div>
     </section>
 
+    <!-- Controls & mechanics -->
     <section class="section bg-white">
       <div class="container">
-        <h2>How to play</h2>
-        <p>Controls are intentionally simple: one button or tap, and it all comes down to timing.</p>
+        <h2>How to play Penalty Shooters 2</h2>
+        <p>
+          The controls are deliberately minimal — one button, held for different durations — but the skill ceiling is real. Every decision comes down to timing, placement, and reading your opponent.
+        </p>
+
+        <h3>Taking a penalty — shooting</h3>
+        <p>
+          When it is your turn to shoot, hold the mouse button (or tap and hold on a touchscreen) to start your run-up. <strong>The longer you hold, the higher the ball will travel when you release.</strong> A short hold sends the ball low. A medium hold puts it at mid-height. A longer hold reaches the top corners. If you hold too long, the ball flies over the crossbar — wasted shot.
+        </p>
+        <p>
+          Move your cursor (or drag your finger) left or right to choose which side of the goal you are targeting. The goalkeeper reacts to your shot direction, so picking a corner — especially a top corner — gives you the best chance of scoring. Vary your placement shot to shot; the AI keeper remembers where you went last time and starts to anticipate repeated corners.
+        </p>
+
+        <h3>Saving a penalty — goalkeeping</h3>
+        <p>
+          After your shot, you switch roles immediately. The AI takes its run-up and an on-screen target indicator appears inside the goal showing where the ball is heading. Hold and move toward that target, then release to commit your dive. The key mistake most players make is diving too early — before the target appears clearly. Wait for it, read it, then react. A well-timed dive on the correct side will save the penalty even on top-corner shots.
+        </p>
+
+        <h3>Sudden death</h3>
+        <p>
+          If both teams are level after five shots each, the round goes to sudden death. Teams alternate one shot at a time. The moment one team scores and the other misses — after an equal number of attempts — the round is decided. Sudden death is where composure matters most: stick to the same shot placement strategy that got you there. Players who start over-thinking under pressure are the ones who over-hold and sky the ball over the bar.
+        </p>
+
         <ol class="steps">
-          <li><strong>Pick a league and team.</strong> Choose from 12 fantasy leagues covering England, Spain, Germany, Italy, Brazil, Argentina, France, and more.</li>
-          <li><strong>Shoot.</strong> Hold the mouse button (or hold your finger on screen) to aim. The longer you hold, the higher the shot travels. Release to kick. Over-hold and it goes over the bar.</li>
-          <li><strong>Save.</strong> As the goalkeeper, watch the on-screen target that appears after the opponent shoots. Hold and move toward it, then release to dive.</li>
-          <li><strong>Win the round.</strong> Score more than your opponent across five shots. Tie = sudden death.</li>
-          <li><strong>Advance through the tournament.</strong> Finish 1st or 2nd in your group to reach the knockouts. Win the final to take the cup.</li>
+          <li><strong>Pick a league and team.</strong> 12 fantasy leagues — England, Spain, Germany, Italy, France, Brazil, Argentina, and more. Each has roughly 30 teams inspired by real clubs.</li>
+          <li><strong>Play the group stage.</strong> Each match is a 5-shot-per-side penalty shootout. Finish 1st or 2nd in your group to advance.</li>
+          <li><strong>Shoot.</strong> Hold to aim (longer = higher), release to kick. Over-hold = over the bar.</li>
+          <li><strong>Save.</strong> Wait for the target indicator, move toward it, release to dive. Don't commit too early.</li>
+          <li><strong>Win the knockouts and final.</strong> Single elimination from the quarter-finals onward. Win the final and the trophy is yours.</li>
         </ol>
-        <p><a href="/how-to-play/" class="btn" style="margin-top:1rem;display:inline-block;">Full guide: controls, tips &amp; rules →</a></p>
+        <p><a href="/how-to-play/" class="btn" style="margin-top:1rem;display:inline-block;">Full controls guide, 7 tips &amp; tournament rules →</a></p>
       </div>
     </section>
 
+    <!-- Leagues & teams -->
     <section class="section">
       <div class="container">
-        <h2>12 leagues, ~360 teams</h2>
+        <h2>12 leagues and ~360 teams</h2>
         <p>
-          Penalty Shooters 2 features 12 fantasy football leagues, each based on a real country's top division. The team names are inspired by real clubs rather than officially licensed, so you'll recognise who's who without it being an exact replica. Countries represented include England, Spain, Germany, Italy, France, the Netherlands, Brazil, Argentina, Mexico, Russia, North America, and a World Cup / Euro-style international tournament.
+          One of Penalty Shooters 2's biggest strengths is the sheer breadth of its team roster. There are 12 fantasy football leagues, each modelled on a real country's top division, plus international tournaments. The team names are inspired by real clubs rather than officially licensed — you'll recognise who's who, but they aren't exact replicas. Combined, this gives approximately 360 teams to choose from.
         </p>
-        <p>
-          The <strong>World Cup 2026 / Global Cup</strong> update adds a 48-team national tournament with a real-world 2026 format, group stage, knockouts, and a global leaderboard.
+
+        <div class="card" style="padding: 0; overflow: hidden; margin-top: 1rem;">
+          <table class="leagues-table">
+            <thead>
+              <tr><th>League</th><th>Based on</th><th>Notable teams</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>England</strong></td><td>Premier League</td><td>Manchester clubs, London clubs, Liverpool</td></tr>
+              <tr><td><strong>Spain</strong></td><td>La Liga</td><td>Madrid, Barcelona, Seville-based clubs</td></tr>
+              <tr><td><strong>Germany</strong></td><td>Bundesliga</td><td>Munich, Dortmund, Berlin, Leipzig</td></tr>
+              <tr><td><strong>Italy</strong></td><td>Serie A</td><td>Turin, Milan, Rome, Naples</td></tr>
+              <tr><td><strong>France</strong></td><td>Ligue 1</td><td>Paris, Lyon, Marseille, Monaco</td></tr>
+              <tr><td><strong>Netherlands</strong></td><td>Eredivisie</td><td>Amsterdam, Rotterdam, Eindhoven</td></tr>
+              <tr><td><strong>Brazil</strong></td><td>Série A</td><td>São Paulo, Rio, Flamengo, Santos</td></tr>
+              <tr><td><strong>Argentina</strong></td><td>Primera División</td><td>Buenos Aires clubs, Boca, River</td></tr>
+              <tr><td><strong>Mexico</strong></td><td>Liga MX</td><td>América, Chivas, Cruz Azul, Tigres</td></tr>
+              <tr><td><strong>Russia</strong></td><td>Premier League</td><td>Moscow, St Petersburg clubs</td></tr>
+              <tr><td><strong>North America</strong></td><td>MLS</td><td>US and Canadian city clubs</td></tr>
+              <tr><td><strong>World Cup / Global Cup</strong></td><td>International</td><td>48 national teams (see below)</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-top: 1rem;">
+          When you start a tournament, you pick one league and then one of its teams. You are placed into a group stage with other teams from the same league, play through the knockout rounds, and — if you win every match — lift the cup for that league. Then you can start again with a different league or try to top the global leaderboard.
         </p>
       </div>
     </section>
 
+    <!-- World Cup -->
+    <section class="section bg-white">
+      <div class="container">
+        <h2>World Cup 2026 — the Global Cup update</h2>
+        <p>
+          The most significant recent addition to Penalty Shooters 2 is the <strong>Global Cup</strong> — a World Cup 2026-inspired tournament that sits alongside the 12 club leagues. Instead of club sides, you pick one of 48 national teams, competing in a format that mirrors the real-world 2026 World Cup structure: a group stage followed by knockout rounds all the way to the final.
+        </p>
+        <p>
+          What makes the Global Cup distinct is its live leaderboard. Every time your chosen nation wins a match, a point is added to that country's total on the global leaderboard — so you're not just playing for yourself, you're contributing to your country's standing against every other player worldwide. It's the freshest content in the game and the one area where Penalty Shooters 2 adds a competitive layer beyond the single-player tournament structure.
+        </p>
+        <p>
+          If you're a returning player who's already completed several club leagues, the Global Cup is the natural next challenge. The 48-team field is the largest in the game, the stakes feel higher, and the leaderboard gives you a reason to keep coming back.
+        </p>
+        <p><a href="/world-cup/" style="color: var(--green); font-weight: 700;">Full Global Cup guide →</a></p>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section class="section">
+      <div class="container">
+        <h2>5 tips to win more matches</h2>
+        <ul class="tips-list">
+          <li>
+            <strong>Never shoot the same corner twice in a row.</strong> The AI goalkeeper tracks your pattern. After two shots to the same corner, it starts favouring that side. Mix top-left, bottom-right, and the occasional centre shot to keep it guessing.
+          </li>
+          <li>
+            <strong>Top corners are your highest-percentage shots.</strong> The keeper has the least reach and reaction time for top-corner penalties. Spend time in your first few matches calibrating exactly how long to hold to hit the top-left and top-right consistently without skying it.
+          </li>
+          <li>
+            <strong>Medium hold beats maximum hold.</strong> It is tempting to blast every penalty with maximum power. In practice, holding too long puts the ball over the bar more often than into the top corner. A controlled hold — roughly three-quarters of maximum — is more accurate and reliable.
+          </li>
+          <li>
+            <strong>As goalkeeper, wait before diving.</strong> The on-screen target indicator appears after the AI begins its run-up. Committing your dive before you see it is guesswork. Wait for the indicator, then react — you have just enough time if you do not hesitate once it appears.
+          </li>
+          <li>
+            <strong>In sudden death, do not change your routine.</strong> The pressure of sudden death causes players to abandon the strategy that worked in normal time. Stick to your corner pattern and hold-time. The AI does not suddenly improve in sudden death — your nerves are the only variable that changes.
+          </li>
+        </ul>
+        <p><a href="/how-to-play/" style="color: var(--green); font-weight: 700;">See the full 7-tip guide including advanced goalkeeping →</a></p>
+      </div>
+    </section>
+
+    <!-- Platforms -->
+    <section class="section bg-white">
+      <div class="container">
+        <h2>Where to play Penalty Shooters 2</h2>
+        <p>
+          The browser version — right here on this page — is the simplest and fastest way to play. It loads instantly in Chrome, Firefox, Edge, and Safari on any device, including school Chromebooks and work laptops. No account, no installation.
+        </p>
+        <p>
+          The <strong>Android app</strong> (available free on Google Play, published by FlashFooty) is worth downloading if you play regularly on mobile — it loads faster than the browser version and doesn't require opening a tab. Search "Penalty Shooters 2" on Google Play to find it.
+        </p>
+        <p>
+          On <strong>iPhone and iPad</strong>, there is no dedicated iOS app, but the browser version works perfectly in Safari and Chrome on iOS. Tap and hold to aim, release to shoot — touchscreen controls are fully supported.
+        </p>
+        <p>
+          A <strong>Steam version</strong> is also available via CrazyGames for players who prefer a PC desktop client. The gameplay is identical to the browser version.
+        </p>
+        <p>Need to play at school or work? <a href="/unblocked/">See our unblocked access guide →</a></p>
+      </div>
+    </section>
+
+    <!-- School callout -->
     <div class="container">
       <div class="card callout">
         <p>
-          <strong>Playing at school or work?</strong> Penalty Shooters 2 runs in any browser over HTTPS — no plugins, no downloads.
-          <a href="/unblocked/">See the unblocked access guide →</a>
+          <strong>Playing at school or work?</strong> Penalty Shooters 2 is a lightweight HTML5 game served over HTTPS with no third-party scripts — it passes most school content filters without needing an "unblocked" mirror site.
+          <a href="/unblocked/">See the full unblocked guide →</a>
         </p>
       </div>
     </div>
 
-    <section class="section bg-white" id="faq">
+    <!-- FAQ -->
+    <section class="section" id="faq">
       <div class="container">
         <h2>Frequently asked questions</h2>
         <div class="faq-list">
@@ -156,24 +289,33 @@ const faqSchema = {
           </details>
           <details class="faq-item">
             <summary>Is Penalty Shooters 2 multiplayer?</summary>
-            <p>Penalty Shooters 2 is a single-player game — you compete against AI opponents, not other players online. There is no online multiplayer mode. For head-to-head play on the same device, see <a href="/how-to-play/">the how-to-play guide</a> for tips.</p>
+            <p>No — Penalty Shooters 2 is a single-player game. You compete against AI opponents, not real players online. There is no online multiplayer mode. For local head-to-head on the same device, you can pass the mouse or touchscreen and take turns.</p>
           </details>
           <details class="faq-item">
-            <summary>Can I play Penalty Shooters 2 on mobile?</summary>
-            <p>Yes. The game runs in any mobile browser on phones and tablets — tap and hold to aim, release to shoot. There's also a free Android app on Google Play. On iPhone or iPad, play via the browser as there is no dedicated iOS app.</p>
+            <summary>How do you shoot high in Penalty Shooters 2?</summary>
+            <p>Hold the mouse button (or your finger on a touchscreen) longer before releasing — shot height increases the longer you hold. Aim for the top corners where the goalkeeper has the least time to reach. Do not over-hold or the ball goes over the crossbar.</p>
           </details>
           <details class="faq-item">
-            <summary>Do I need to download anything?</summary>
-            <p>No. The browser version loads instantly via HTML5 — just open the page and play. The only download option is the Android app on Google Play, which is optional.</p>
+            <summary>Can I play Penalty Shooters 2 on mobile and iPhone?</summary>
+            <p>Yes on both. The game runs in any mobile browser on phones and tablets. On Android there is also a free app on Google Play. On iPhone and iPad, play the browser version in Safari — there is no native iOS app, but browser play works fully on touchscreen.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Who made Penalty Shooters 2?</summary>
+            <p>Vladeta Marinkovic, an electrical engineer who has developed over 50 HTML5 games, published under the name 10x10games. The game was first released in April 2016. The Android version on Google Play is published by FlashFooty.</p>
           </details>
           <details class="faq-item">
             <summary>Is it possible to win Penalty Shooters 2?</summary>
-            <p>Yes — you can win every match and take the cup. There is no artificial difficulty cap. The key is varying your shot placement so the keeper cannot read you, and timing your dives as goalkeeper rather than committing early.</p>
+            <p>Yes — there is no artificial difficulty cap. You can win every match and lift the cup. The key is varying your shot placement each penalty so the keeper cannot predict you, and waiting for the target indicator before diving as goalkeeper rather than guessing.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Is there a Penalty Shooters 3?</summary>
+            <p>There is no confirmed standalone Penalty Shooters 3. Penalty Shooters 2 continues to receive updates — the most recent being the Global Cup / World Cup 2026 tournament mode. Searches for "Penalty Shooters 3" lead back to Penalty Shooters 2.</p>
           </details>
         </div>
-        <p style="margin-top:1.25rem"><a href="/faq/">See all FAQs →</a></p>
+        <p style="margin-top:1.25rem"><a href="/faq/">See all 20 FAQs →</a></p>
       </div>
     </section>
+
   </main>
 
   <Footer slot="footer" />
@@ -184,10 +326,24 @@ const faqSchema = {
   .lead { font-size: 1.05rem; margin-top: 0.6rem; color: var(--text); max-width: 700px; }
   .section { padding: 2rem 0; }
   .bg-white { background: var(--white); }
+
   .steps { margin-top: 0.75rem; }
-  .steps li { margin-bottom: 0.6rem; }
+  .steps li { margin-bottom: 0.65rem; }
+
+  .tips-list { margin-top: 0.75rem; padding-left: 1.25rem; }
+  .tips-list li { margin-bottom: 0.9rem; line-height: 1.65; }
+
   .callout { background: #eef7ee; border-color: var(--green-light); }
   .callout p { margin: 0; }
+
+  /* Leagues table */
+  .leagues-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .leagues-table thead th { background: var(--green); color: var(--white); padding: 0.6rem 0.9rem; text-align: left; }
+  .leagues-table td { padding: 0.5rem 0.9rem; border-bottom: 1px solid var(--border); }
+  .leagues-table tr:last-child td { border-bottom: none; }
+  .leagues-table tr:nth-child(even) td { background: #eef4ee; }
+
+  /* FAQ */
   .faq-list { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.5rem; }
   .faq-item { border: 1px solid var(--border); border-radius: var(--radius); background: var(--white); }
   .faq-item summary {
@@ -198,7 +354,11 @@ const faqSchema = {
   .faq-item summary::-webkit-details-marker { display: none; }
   .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--green); }
   .faq-item[open] summary::after { content: '−'; }
-  .faq-item p { padding: 0 1rem 0.85rem; margin: 0; font-size: 0.95rem; }
+  .faq-item p { padding: 0 1rem 0.85rem; margin: 0; font-size: 0.95rem; line-height: 1.65; }
+
+  /* Meta table */
   .meta-block table th { background: none; color: var(--text); font-weight: 700; width: 38%; vertical-align: top; }
   .meta-block table th, .meta-block table td { padding: 0.45rem 0.5rem; }
+
+  h3 { color: var(--green-dark); margin-top: 1.5rem; margin-bottom: 0.4rem; }
 </style>
