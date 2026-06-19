@@ -2,9 +2,12 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
+import cloudflare from '@astrojs/cloudflare';
+
 export default defineConfig({
   site: 'https://penaltyshooters2.co.uk',
   trailingSlash: 'always',
   build: { format: 'directory' },
   integrations: [sitemap()],
+  adapter: cloudflare(),
 });
